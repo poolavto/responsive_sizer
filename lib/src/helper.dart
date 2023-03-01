@@ -83,12 +83,12 @@ class Device {
     }
 
     // Sets ScreenType
-    if ((orientation == Orientation.portrait && width <= maxMobileWidth) ||
-        (orientation == Orientation.landscape && height <= maxMobileWidth)) {
+    if ((orientation == Orientation.portrait && width <= maxMobileWidth)/* ||
+        (orientation == Orientation.landscape && height <= maxMobileWidth)*/) {
       screenType = ScreenType.mobile;
     } else if (maxTabletWidth == null ||
-        (orientation == Orientation.portrait && width <= maxTabletWidth) ||
-        (orientation == Orientation.landscape && height <= maxTabletWidth)) {
+        (orientation == Orientation.portrait && width <= maxTabletWidth)/* ||
+        (orientation == Orientation.landscape && height <= maxTabletWidth)*/) {
       screenType = ScreenType.tablet;
     } else {
       screenType = ScreenType.desktop;
